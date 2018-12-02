@@ -70,6 +70,7 @@ def itemController(kg, index, item):
 
 def main():
     for i in range(0,100): #Number of iterations
+
     #Distros
         papa = dist_uniform(2,7)
         tomate = dist_uniform(2,7)
