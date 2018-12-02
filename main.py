@@ -9,7 +9,7 @@ from pyfiglet import figlet_format
 from random import randint
 from time import sleep
 
-cprint(figlet_format('Aida Lovers', font='banner'), 'white')
+cprint(figlet_format('Proyecto', font='banner'), 'white')
 
 cprint("\tPapa: ", 'yellow', end="")
 print("100kg")
@@ -26,6 +26,7 @@ print("100kg")
 cprint("\tZanahoria: ", 'cyan', end="")
 print("100kg")
 print("\n")
+
 #0 Papa
 #1 Tomate
 #2 Nuez
@@ -39,9 +40,20 @@ items = np.array([
 [100]])
 
 
+
+#Distribution uniform
+def dist_uniform(a, b):
+    n = np.random.randint(a, b, 1)
+    return int(n)
+
+#Distribution binomial
+def dist_binomial(a,b):
+    n = np.random.binomial(a,b, 1)
+
+
+
 #Item Controller
 def itemController(kg, index, item):
-    
     #Index
     items[index] -= kg
     print("Se vendio: "+str(kg)+"kg de "+str(item))
@@ -59,18 +71,18 @@ def itemController(kg, index, item):
 def main():
     for i in range(0,100): #Number of iterations
     #Distros
-        sell0 = randint(1,19)
-        sell1 = randint(1,19)
-        sell2 = randint(1,19)
-        sell3 = randint(1,19)
-        sell4 = randint(1,19)
+        papa = dist_uniform(2,7)
+        tomate = dist_uniform(2,7)
+        nuez = dist_uniform(2,7)
+        cebolla = dist_uniform(2,7)
+        zanahoria = dist_uniform(2,7)
 
     #Call itemController
-        itemController(sell0, 0, "Papa")
-        itemController(sell1, 1, "Tomate")
-        itemController(sell2, 2, "Nuez")
-        itemController(sell3, 3, "Cebolla")
-        itemController(sell4, 4, "Zanahoria")
+        itemController(papa, 0, "Papa")
+        itemController(tomate, 1, "Tomate")
+        itemController(nuez, 2, "Nuez")
+        itemController(cebolla, 3, "Cebolla")
+        itemController(zanahoria, 4, "Zanahoria")
         sleep(4)
 
 main()
