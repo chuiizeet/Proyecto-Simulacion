@@ -7,6 +7,9 @@ from pyfiglet import figlet_format
 from random import randint
 from time import sleep
 
+#Graph
+import graph
+
 # print("\n\n\n")
 cprint(figlet_format('\tProyecto', font='doom'), 'white')
 
@@ -16,7 +19,7 @@ print("35kg")
 cprint("\tTomate: ", 'red', end="")
 print("35kg")
 
-cprint("\tNuez: ", 'green', end="")
+cprint("\tChile: ", 'green', end="")
 print("35kg")
 
 cprint("\tCebolla: ", 'blue', end="")
@@ -26,19 +29,11 @@ cprint("\tZanahoria: ", 'cyan', end="")
 print("35kg")
 print("\n")
 
-#Data
-# Papa: 2,4,1,6,7,3,5
-# Tomate: 5,6,7,7,1,2,4
-# Cebolla: 1,2,3,3,1,6,5
-# Zanahoria: 1,1,5,7,3,3,4
-# Chile: 4,3,6,7,2,1,3
-
 #0 Papa
 #1 Tomate
 #2 Chile
 #3 Cebolla
 #4 Zanahoria
-
 items = np.array([
 [35],
 [35],
@@ -46,6 +41,7 @@ items = np.array([
 [35],
 [35]])
 
+#Sell arrays
 sellPapa = []
 sellTomate = []
 sellChile = []
@@ -54,13 +50,12 @@ sellZanahoria = []
 
 #Distribution uniform
 def dist_uniform(a, b):
-    n = np.random.randint(a, b, 1)
+    n = np.random.uniform(a, b, 1)
     return int(n)
-
-#Distribution binomial
-def dist_binomial(a,b):
-    n = np.random.binomial(b,.5, 1)
-    return int(n)
+#Distribution logNormal
+def dist_logNormal(a,b):
+    s = np.random.lognormal(a, b, 1)
+    return(int(s))
 
 #Item Controller
 def itemController(kg, index, item):
@@ -81,15 +76,15 @@ def itemController(kg, index, item):
         pass
 
 def main():
-    for i in range(0,100): #Number of iterations
+    for i in range(0,30): #Number of iterations
 
         #Distros
         print("\t Dia: "+str(i))
-        papa = dist_binomial(1,8)
-        tomate = dist_binomial(1,7)
-        chile = dist_binomial(1,7)
-        cebolla = dist_binomial(1,7)
-        zanahoria = dist_binomial(1,7)
+        papa = dist_logNormal(1.19,.58)
+        tomate = dist_uniform(1,8)
+        chile = dist_uniform(1,8)
+        cebolla = dist_logNormal(0.858,0.639)
+        zanahoria = dist_logNormal(1.13,0.561)
 
         #Array
         sellPapa.append(int(papa))
@@ -104,7 +99,6 @@ def main():
         itemController(chile, 2, "Chile")
         itemController(cebolla, 3, "Cebolla")
         itemController(zanahoria, 4, "Zanahoria")
-        sleep(3)
 
     print("\n\n")
     print("Ventas Papa: "+str(sellPapa)+"\n")
@@ -113,4 +107,7 @@ def main():
     print("Ventas Cebolla: "+str(sellCebolla)+"\n")
     print("Ventas Zanahoria: "+str(sellZanahoria)+"\n")
 
+    graph.graph(sellPapa, sellTomate, sellChile, sellCebolla, sellZanahoria)
+
 main()
+# dist_logNormal()
