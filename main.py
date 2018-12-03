@@ -76,7 +76,7 @@ def itemController(kg, index, item):
         pass
 
 def main():
-    for i in range(0,30): #Number of iterations
+    for i in range(0,100): #Number of iterations
 
         #Distros
         print("\t Dia: "+str(i))
@@ -84,7 +84,7 @@ def main():
         tomate = dist_uniform(1,8)
         chile = dist_uniform(1,8)
         cebolla = dist_logNormal(0.858,0.639)
-        zanahoria = dist_logNormal(1.13,0.561)
+        zanahoria = dist_uniform(1,8)
 
         #Array
         sellPapa.append(int(papa))

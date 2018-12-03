@@ -43,7 +43,7 @@ Nuestro proyecto generará datos de manera aleatoria de la venta de alimentos to
 
 # Gráficas
 ## 30 iteraciones
-![30](https://i.ibb.co/FhLNKbB/30.png)
+![30](https://i.ibb.co/BnrsZMs/new30.png)
 
 ## 100 iteraciones
-![100](https://i.ibb.co/HFxM0K9/199.png)
+![100](https://i.ibb.co/X8WMM0s/new100png.png)
