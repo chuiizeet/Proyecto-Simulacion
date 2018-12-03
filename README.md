@@ -1,4 +1,4 @@
-# Proyecto de Modelado y simulacioón de sistemas dinámicos
+# Proyecto de Modelado y simulación de sistemas dinámicos
 
 ## Introducción
 Nuestro proyecto generará datos de manera aleatoria de la venta de alimentos tomando como referencia una tienda de abarrotes. Usamos como objetos de muestra 5 alimentos para realizar las pruebas.
