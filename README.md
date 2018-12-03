@@ -30,4 +30,10 @@ Nuestro proyecto generará datos de manera aleatoria de la venta de alimentos to
 ![Chile](https://i.imgur.com/ng3qrQa.jpg)
 
 ## Formula: Distribución binomial
-![equation](http://www.sciweavers.org/tex2img.php?eq=P%28N%29%20%3D%20%20%5Cbinom%7Bn%7D%7BN%7D%20%20p%5E%7BN%7D%20%281-p%29%5E%7Bn-N%7D&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+![equation](https://i.imgur.com/Ztujc7P.png)
+
+# Screenshots
+## Menu
+![Menu](https://i.imgur.com/XAT3C64.png)
+## Gif 
+![Gif](https://i.imgur.com/9EaK43R.gif)
