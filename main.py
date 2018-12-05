@@ -29,6 +29,8 @@ cprint("\tZanahoria: ", 'cyan', end="")
 print("35kg")
 print("\n")
 
+instance = input('\nCuantos dias desea simular?\n')
+
 #0 Papa
 #1 Tomate
 #2 Chile
@@ -76,7 +78,7 @@ def itemController(kg, index, item):
         pass
 
 def main():
-    for i in range(0,100): #Number of iterations
+    for i in range(0,int(instance)): #Number of iterations
 
         #Distros
         print("\t Dia: "+str(i))
